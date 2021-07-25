@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# PhotoSpace - ReactJS, NodeJS, ExpressJS, MongoDB, Base64
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Description:
 
-In the project directory, you can run:
+This project was made in as a way to practice my Full Stack skills.
+I also used it to learn how to implement an authentication system into my
+back-end, which in this case I used JWT. The user can also login
+with their google account, and all info related to the user is
+saved in a MongoDB database. If the user wants to upload a
+image, the image (and other details) are inserted to the database
+and uploaded to the database as an image storage.
 
-### `npm start`
+### Features Include:
+- Authentication with Google OAUTH
+- Authentication with JWT
+- Upload an image together with:
+  - A title
+  - Editing Features
+  - Like Ability
+- Delete their own posts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Time Taken:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+10 Days
 
-### `npm test`
+## Technologies Used:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- JavaScript
+- ReactJS
+- NodeJS
+- ExpressJS
+- MongoDB
+- JWT
+- Google OAUTH
+- Base64
 
-### `npm run build`
+### Front End:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This repository is for the front-end. The front-end is hosted on Netlify.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Back End
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The back-end is hosted on a Heroku Dyno. 
+The back-end repository is: https://github.com/shreyanshxyz/PhotoSpace-Backend
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Design:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Database:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Users: Stores user first and last name, email, and googleId
+- Pins: Stores all pins uploaded to the platform. Information for each pin include the cloudinary image id, googleId of the user that uploaded, a title, a description, and an optional url.
+- SavedPins: Stores all pins that were saved by a user. Each saved pin stores the cloudinar image id and the googleId of the user saving the pin.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<!-- ### Server-Side:
+Apollo Server: 
+- Express server with a graphql enpoint:
+  - Mutations and queries are sent to the front end and handled with Apollo-Client.
+  - Sequelize ORM is used for database requests -->
+  
+### Front-End:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Front End fully developed in ReactJS using the create-react-app boiler plate
