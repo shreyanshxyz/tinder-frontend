@@ -32,7 +32,7 @@ This repository is for the front-end. The front-end is hosted on Netlify.
 ### Back End
 
 The back-end is hosted on a Heroku Dyno. 
-The back-end repository is: https://github.com/shreyanshxyz/PhotoSpace-Backend
+The back-end repository is: https://github.com/shreyanshxyz/tinder-backend/
 
 
 ## Design:
